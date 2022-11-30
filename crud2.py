@@ -27,6 +27,6 @@ with st.form('Formulário de conta'):
     nota_t_media = sum(notas) / len(notas)
     st.write(f'Média Parcial: {nota_t_media}')
 
-    st.text_area('Um comentário:')
+    st.text_input('Um comentário:')
 
     submitted = st.form_submit_button()
