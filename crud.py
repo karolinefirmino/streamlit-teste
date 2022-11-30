@@ -15,7 +15,7 @@ with st.form('Formulário de conta'):
 
     d['comentário'] = st.text_area('Um comentário:')
 
-    st.form_submit_button('Enviar')
+    submitted = st.form_submit_button("Submit")
 
 if d:
     st.json(d)
