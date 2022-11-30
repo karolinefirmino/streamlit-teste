@@ -23,8 +23,8 @@ with st.form('Formulário de conta'):
     nota_r = b.number_input('Ritmo:')
     nota_s = a.number_input('Sonoridade:')
     nota_i = b.number_input('Interpretação:')
-    soma = nota_p + nota_r + nota_s + nota_i
-    nota_t_media = soma / len(soma)
+    notas = [nota_p, nota_r, nota_s, nota_i]
+    nota_t_media = sum(notas) / len(notas)
     st.text_area = f'Media Final: {nota_t_media}'
 
     st.text_area('Um comentário:')
