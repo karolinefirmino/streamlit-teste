@@ -19,10 +19,10 @@ with st.form('Formulário de conta'):
                 options.append(i)
             return options
 
-    nota_p = a.number_input('Postura:', value=int)
-    nota_r = b.number_input('Ritmo:', value=int)
-    nota_s = a.number_input('Sonoridade:', value=int)
-    nota_i = b.number_input('Interpretação:', value=int)
+    nota_p = a.number_input('Postura:')
+    nota_r = b.number_input('Ritmo:')
+    nota_s = a.number_input('Sonoridade:')
+    nota_i = b.number_input('Interpretação:')
     #notas = [nota_p, nota_r, nota_s, nota_i]
     #nota_t_media = sum(notas) / len(notas)
     soma = nota_p + nota_r + nota_s + nota_i
