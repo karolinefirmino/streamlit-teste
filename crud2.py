@@ -8,18 +8,6 @@ with st.form('Formulário de conta'):
     inst = st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
     option = ""
 
-    def format_func(option):
-
-        if inst == 'Clarinete':
-            return clarinet_students[option]
-            option = st.selectbox("Select option", options=list(
-                clarinet_students.keys()), format_func=format_func)
-        else:
-            return flute_students[option]
-            option = st.selectbox("Select option", options=list(
-                flute_students.keys()), format_func=format_func)
-
-    st.write(f"You selected option {option} called {format_func(option)}")
     a.number_input('Postura:')
     b.number_input('Ritmo:')
     a.number_input('Sonoridade:')
