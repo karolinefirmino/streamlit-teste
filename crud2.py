@@ -13,11 +13,11 @@ with st.form('Formulário de conta'):
         if inst == 'Clarinete':
             return clarinet_students[option]
             option = st.selectbox("Select option", options=list(
-                clarinet_students.values()), format_func=format_func)
+                clarinet_students.values()), format_func=lambda x: "option " + str(x))
         else:
             return flute_students[option]
             option = st.selectbox("Select option", options=list(
-                flute_students.values()), format_func=format_func)
+                flute_students.values()), format_func=lambda x: "option " + str(x))
 
     st.write(f"You selected option {option} called {format_func(option)}")
     a.number_input('Postura:')
