@@ -2,18 +2,22 @@ import streamlit as st
 
 
 with st.form('Formulário de conta'):
-    clarinet_students = ['Angela Pommer', 'Gabriel', 'Ana']
-    flute_students = ['Vinicius', 'Matheus']
+    clarinet_students = {1: 'Angela Pommer', 2: 'Gabriel', 3: 'Ana'}
+    flute_students = {1: 'Vinicius', 2: 'Matheus'}
     a, b = st.columns(2)
     inst = st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
+    x = {}
 
     def format_func(option):
+
         if inst == 'Clarinete':
-            return clarinet_students[option]
+            x = clarinet_students[option]
+            return x
         else:
-            return flute_students[option]
+            x = flute_students[option]
+            return x
     option = st.selectbox("Select option", options=list(
-        CHOICES.keys()), format_func=format_func)
+        x.keys()), format_func=format_func)
     st.write(f"You selected option {option} called {format_func(option)}")
     a.number_input('Postura:')
     b.number_input('Ritmo:')
