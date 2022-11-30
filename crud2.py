@@ -12,7 +12,7 @@ with st.form('Formulário de conta'):
             student = st.text_input(clarinet_students)
         else:
             student = st.text_input(flute_students)
-    st.student()
+    student()
     a.number_input('Postura:')
     b.number_input('Ritmo:')
     a.number_input('Sonoridade:')
