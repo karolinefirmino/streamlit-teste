@@ -27,10 +27,10 @@ with st.form('Formulário de conta'):
                 options.append(i)
             return options
 
-    nota_p = c.number_input('Postura:')
-    nota_r = d.number_input('Ritmo:')
-    nota_s = c.number_input('Sonoridade:')
-    nota_i = d.number_input('Interpretação:')
+    nota_p = st.number_input('Postura:')
+    nota_r = st.number_input('Ritmo:')
+    nota_s = st.number_input('Sonoridade:')
+    nota_i = st.number_input('Interpretação:')
     #notas = [nota_p, nota_r, nota_s, nota_i]
     #nota_t_media = sum(notas) / len(notas)
     soma = nota_p + nota_r + nota_s + nota_i
@@ -40,3 +40,4 @@ with st.form('Formulário de conta'):
     st.write(f'Média Parcial: {media_p}')
 
     submitted = st.form_submit_button()
+    st.balloons()
