@@ -2,12 +2,21 @@ import streamlit as st
 
 
 with st.form('Formulário de conta'):
-    st.text_input('Nome do Aluno:')
-    st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
-    st.number_input('Postura:')
-    st.number_input('Ritmo:')
-    st.number_input('Sonoridade:')
-    st.number_input('Interpretação:')
+    clarinet_students = ['Angela Pommer', 'Gabriel', 'Ana']
+    flute_students = ['Vinicius', 'Matheus']
+
+    def student():
+        if inst.get() == "Clarinete":
+            stu.config(value=clarinet_students)
+        else:
+            stu.config(value=flute_students)
+    a, b = st.columns(2)
+    stu = st.text_input(student())
+    inst = st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
+    a.number_input('Postura:')
+    b.number_input('Ritmo:')
+    a.number_input('Sonoridade:')
+    b.number_input('Interpretação:')
 
     st.text_area('Um comentário:')
 
