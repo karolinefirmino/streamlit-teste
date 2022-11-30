@@ -17,7 +17,7 @@ with st.form('Formulário de conta'):
             options = list(range(len(display)))
             value = st.selectbox("aluna/o", options,
                                  format_func=lambda x: display[x])
-            return option, value
+            return value
         else:
             # return flute_students[option]
             # option = st.selectbox("Select option", options=list(
@@ -26,9 +26,9 @@ with st.form('Formulário de conta'):
             options = list(range(len(display)))
             value = st.selectbox(
                 "aluna/o", option, format_func=lambda x: display[x])
-            return option, value
+            return value
         st.write(f"You selected option {option} called {format_func(option)}")
-    format_func(option)
+    format_func(option.__getitem__)
     a.number_input('Postura:')
     b.number_input('Ritmo:')
     a.number_input('Sonoridade:')
