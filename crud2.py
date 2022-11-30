@@ -25,7 +25,7 @@ with st.form('Formulário de conta'):
     nota_i = b.number_input('Interpretação:')
     notas = [nota_p, nota_r, nota_s, nota_i]
     nota_t_media = sum(notas) / len(notas)
-    st.text_area = f'Media Final: {nota_t_media}'
+    st.write(f'Média Parcial: {nota_t_media}')
 
     st.text_area('Um comentário:')
 
