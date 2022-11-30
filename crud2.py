@@ -6,15 +6,20 @@ with st.form('Formulário de conta'):
     flute_students = {1: 'Vinicius', 2: 'Matheus'}
     a, b = st.columns(2)
     inst = st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
-    student = st.selectbox()
+    options = {}
+    student = st.selectbox('Aluna/o', options)
 
     def aluno(inst):
         if inst == 'Clarinete':
-            student = st.selectbox(clarinet_students)
-            return student
+            for i in range(len(clarinet_students.keys())):
+                options[i] = clarinet_students.values()
+                i += 1
+                return options
         else:
-            student = st.selectbox(flute_students)
-            return student
+            for i in range(len(flute_students.keys())):
+                options[i] = flute_students.values()
+                i += 1
+                return options
 
     a.number_input('Postura:')
     b.number_input('Ritmo:')
