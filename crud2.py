@@ -16,7 +16,7 @@ with st.form('Formulário de conta'):
             return flute_students[option]
             option = st.selectbox("Select option", options=list(
                 flute_students.keys()), format_func=format_func)
-    format_func(inst)
+    format_func(inst.get())
 
     st.write(f"You selected option {option} called {format_func(option)}")
     a.number_input('Postura:')
