@@ -8,11 +8,11 @@ with st.form('Formulário de conta'):
     inst = st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
 
     def student():
-        if inst.get() == 'Clarinete':
+        if inst == 'Clarinete':
             student = st.text_input(clarinet_students)
         else:
             student = st.text_input(flute_students)
-    student()
+    st.student()
     a.number_input('Postura:')
     b.number_input('Ritmo:')
     a.number_input('Sonoridade:')
