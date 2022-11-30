@@ -4,9 +4,9 @@ import streamlit as st
 d = {}
 
 with st.form('Formulário de conta'):
-    a, b = st.columns(2)
-    d['nome'] = a.text_input('Nome do Aluno:')
-    d['instrumento'] = b.text_selectbox(
+    st.columns(2)
+    d['nome'] = st.text_input('Nome do Aluno:')
+    d['instrumento'] = st.text_selectbox(
         'Instrumento', ('Flauta Transversal', 'Clarinete'))
     d['nota_postura'] = st.number_input('Postura:')
     d['nota_ritmo'] = st.number_input('Ritmo:')
