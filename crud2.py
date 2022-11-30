@@ -9,23 +9,22 @@ with st.form('Formulário de conta'):
 
     def format_func(option):
         if inst == 'Clarinete':
-            # return clarinet_students[option]
-            # option = st.selectbox("Select option", options=list(
-            # clarinet_students.keys()), format_func=format_func)
-            display = (clarinet_students.values())
-            options = list(range(len(display)))
-            value = st.selectbox("aluna/o", options,
-                                 format_func=format_func)
-            return value
+            return clarinet_students[option]
+            option = st.selectbox("Select option", options=list(
+                clarinet_students.keys()), format_func=format_func)
+            #display = (clarinet_students.values())
+            #options = list(range(len(display)))
+            #value = st.selectbox("aluna/o", options, format_func=format_func)
+            # return value
         else:
-            # return flute_students[option]
-            # option = st.selectbox("Select option", options=list(
-            # flute_students.keys()), format_func=format_func)
-            display = (flute_students.values())
-            options = list(range(len(display)))
-            value = st.selectbox(
-                "aluna/o", option, format_func=format_func)
-            return value
+            return flute_students[option]
+            option = st.selectbox("Select option", options=list(
+                flute_students.keys()), format_func=format_func)
+            #display = (flute_students.values())
+            #options = list(range(len(display)))
+            # value = st.selectbox(
+            # "aluna/o", option, format_func=format_func)
+            # return value
         st.write(f"You selected option {option} called {format_func(option)}")
     format_func(inst)
 
