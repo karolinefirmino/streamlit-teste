@@ -12,7 +12,7 @@ Abaixo registre as notas das/dos alunas/alunos avaliadas/os
 with st.form('Formulário de conta'):
     clarinet_students = ['Angela Pommer',  'Gabriel', 'Ana']
     flute_students = ['Vinicius', 'Matheus']
-    a, b = st.columns(2)
+    c, d = st.columns(2)
     inst = st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
     options = []
     student = st.selectbox('Aluna/o', options)
@@ -27,10 +27,10 @@ with st.form('Formulário de conta'):
                 options.append(i)
             return options
 
-    nota_p = st.number_input('Postura:')
-    nota_r = st.number_input('Ritmo:')
-    nota_s = st.number_input('Sonoridade:')
-    nota_i = st.number_input('Interpretação:')
+    nota_p = c.number_input('Postura:')
+    nota_r = d.number_input('Ritmo:')
+    nota_s = c.number_input('Sonoridade:')
+    nota_i = d.number_input('Interpretação:')
     #notas = [nota_p, nota_r, nota_s, nota_i]
     #nota_t_media = sum(notas) / len(notas)
     soma = nota_p + nota_r + nota_s + nota_i
