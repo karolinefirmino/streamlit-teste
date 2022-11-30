@@ -11,7 +11,7 @@ with st.form('Formulário de conta'):
             student.config(value=clarinet_students)
         else:
             student.config(value=flute_students)
-    stu = st.text_input(student.__get__())
+    stu = st.text_input(student.get())
     a, b = st.columns(2)
     inst = st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
     a.number_input('Postura:')
