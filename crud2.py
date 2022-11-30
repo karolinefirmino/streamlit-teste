@@ -1,6 +1,14 @@
 import streamlit as st
 
+st.markdown(
+    '''
+# Bem-vindo/a, Professor(a) 
+### (Teste) Sistema de Gestão Informacional da Escola Livre de Música.
 
+Abaixo registre as notas das/dos alunas/alunos avaliadas/os
+
+'''
+)
 with st.form('Formulário de conta'):
     clarinet_students = ['Angela Pommer',  'Gabriel', 'Ana']
     flute_students = ['Vinicius', 'Matheus']
@@ -27,8 +35,8 @@ with st.form('Formulário de conta'):
     #nota_t_media = sum(notas) / len(notas)
     soma = nota_p + nota_r + nota_s + nota_i
     media_p = int(soma) / 4
-    st.write(f'Média Parcial: {media_p}')
 
     st.text_input('Um comentário:')
+    st.write(f'Média Parcial: {media_p}')
 
     submitted = st.form_submit_button()
