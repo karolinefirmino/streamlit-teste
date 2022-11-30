@@ -4,14 +4,13 @@ import streamlit as st
 with st.form('Formulário de conta'):
     clarinet_students = ['Angela Pommer', 'Gabriel', 'Ana']
     flute_students = ['Vinicius', 'Matheus']
-    student = ""
 
     def student():
         if inst.get() == "Clarinete":
-            student.config(value=clarinet_students)
+            student = st.text_input(clarinet_students)
         else:
-            student.config(value=flute_students)
-    stu = st.text_input(student.get())
+            student = st.text_input(flute_students)
+    student()
     a, b = st.columns(2)
     inst = st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
     a.number_input('Postura:')
