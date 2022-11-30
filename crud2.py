@@ -9,9 +9,9 @@ with st.form('Formulário de conta'):
 
     def student():
         if inst == 'Clarinete':
-            student = st.text_input(clarinet_students)
+            student = st.text_input(clarinet_students.__getitem__)
         else:
-            student = st.text_input(flute_students)
+            student = st.text_input(flute_students.__str__)
     student()
     a.number_input('Postura:')
     b.number_input('Ritmo:')
