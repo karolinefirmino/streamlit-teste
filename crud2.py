@@ -16,7 +16,7 @@ with st.form('Formulário de conta'):
             display = (clarinet_students.values())
             options = list(range(len(display)))
             value = st.selectbox("aluna/o", options,
-                                 format_func=lambda x: display[x])
+                                 format_func=format_func)
             return value
         else:
             # return flute_students[option]
@@ -25,7 +25,7 @@ with st.form('Formulário de conta'):
             display = (flute_students.values())
             options = list(range(len(display)))
             value = st.selectbox(
-                "aluna/o", option, format_func=lambda x: display[x])
+                "aluna/o", option, format_func=format_func)
             return value
         st.write(f"You selected option {option} called {format_func(option)}")
     format_func(option.__getitem__)
