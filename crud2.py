@@ -28,7 +28,7 @@ with st.form('Formulário de conta'):
                 "aluna/o", option, format_func=lambda x: display[x])
             return option, value
         st.write(f"You selected option {option} called {format_func(option)}")
-    format_func()
+    format_func(option)
     a.number_input('Postura:')
     b.number_input('Ritmo:')
     a.number_input('Sonoridade:')
