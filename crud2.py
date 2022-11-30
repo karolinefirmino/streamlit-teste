@@ -6,10 +6,12 @@ with st.form('Formulário de conta'):
     flute_students = ['Vinicius', 'Matheus']
     a, b = st.columns(2)
     inst = st.selectbox('Instrumento', ('Clarinete', 'Flauta Transversal'))
-    CHOICES = {1: clarinet_students, 2: flute_students}
 
     def format_func(option):
-        return CHOICES[option]
+        if inst == 'Clarinete':
+            return clarinet_students[option]
+        else:
+            return flute_students[option]
     option = st.selectbox("Select option", options=list(
         CHOICES.keys()), format_func=format_func)
     st.write(f"You selected option {option} called {format_func(option)}")
